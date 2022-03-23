@@ -1,0 +1,24 @@
+{
+  "name": "express-react-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate code for express-react dev and deploy",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "build": "cd client && npm install && npm run build",
+    "dev": "concurrently \"nodemon server\" \"cd client && npm start\""
+  },
+  "engines": {
+    "node": "14.15.4"
+  },
+  "keywords": [],
+  "author": "Makaron Ma",
+  "license": "ISC"
+}
