@@ -4,16 +4,19 @@
   "description": "Boilerplate code for express-react dev and deploy",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.17.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3"
+  }, 
+  "devDependencies": {
+    "concurrently": "^7.0.0",
     "nodemon": "^2.0.15"
   },
-  "devDependencies": {
-    "concurrently": "^7.0.0"
-  },
   "scripts": {
-    "start": "node server.js",
-    "build": "cd client && npm install && npm run build",
-    "dev": "concurrently \"nodemon server\" \"cd client && npm start\""
+    "start": "node server",
+    "build": "npm install && cd client && npm install && npm run build",
+    "dev": "concurrently \"nodemon server\" \"cd client && npm start\"",
+    "setup": "npm install && cd client && npm install "
   },
   "engines": {
     "node": "14.15.4"
